@@ -42,6 +42,10 @@ module WhiplashApi
         self.put("#{id}/uncancel")
       end
 
+      def fees(id, args={})
+        self.get("#{id}/fees")
+      end
+
       private
 
       def status_mapping
@@ -109,6 +113,10 @@ module WhiplashApi
 
     def uncancel
       self.put(:uncancel)
+    end
+
+    def fee
+      self.get("#{id}/fees")
     end
 
     # def pause
